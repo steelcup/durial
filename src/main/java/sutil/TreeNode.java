@@ -22,4 +22,29 @@ public class TreeNode {
         this.addLeft(vl);
         this.addRight(vr);
     }
+
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("[");
+        this.toString(sb);
+        sb.append("]\n");
+        return sb.toString();
+    }
+
+    private void toString(StringBuilder sb) {
+        if (sb.length() > 1) {
+            sb.append(", ");
+        }
+        sb.append(this.val);
+        if (this.left == null) {
+            sb.append(", null");
+        } else {
+            this.left.toString(sb);
+        }
+        if (this.right == null) {
+            sb.append(", null");
+        } else {
+            this.right.toString(sb);
+        }
+    }
 }

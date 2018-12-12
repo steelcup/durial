@@ -26,10 +26,17 @@ The above output corresponds to the 5 unique BST's shown below:
    2     1         2                 3
 
  */
+import org.junit.jupiter.api.Test;
 import sutil.*;
 import java.util.*;
 
 public class ST0095 {
+
+    @Test
+    public void test() {
+        System.out.println(this.generateTrees(3).toString());
+    }
+
     public List<TreeNode> generateTrees(int n) {
         List<TreeNode> list = generate(1, n);
         return list;
